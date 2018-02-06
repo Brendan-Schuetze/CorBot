@@ -4,7 +4,7 @@ library(ggthemes)
 library(twitteR)
 library(luzlogr)
 
-source("Credentials.R")
+source("~/CorBot/Credentials.R")
 
 conditions <- c(rep("A", 100), rep("B", 100))
 sd <-  abs(rnorm(1, .5, .25))
@@ -40,9 +40,9 @@ ggsave(filename = "plot.png")
 
 tweet(text = title, mediaPath = "plot.png")
 
-openlog("correlations.log")
+openlog("correlations.log", append = TRUE)
 printlog(paste(title, substr(toString(sig$p.value), 1, 5)))
-closelog()
+closelog(sessionInfo = FALSE)
 
 quit(save = "no", status = 0)
 
