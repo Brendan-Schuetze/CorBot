@@ -33,3 +33,6 @@ loaded via a namespace (and not attached):
 [21] curl_3.1         mime_0.5         glue_1.2.0       labeling_0.3    
 [25] compiler_3.4.1   pillar_1.1.0     methods_3.4.1    scales_0.5.0    
 [29] pkgconfig_2.0.1 
+Tue Feb  6 01:02:53 2018  Opening correlations.log 
+Tue Feb  6 01:02:53 2018  Not Publishable. 0.773 
+Tue Feb  6 01:02:53 2018  Closing correlations.log flags = 0 
