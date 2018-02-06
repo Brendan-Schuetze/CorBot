@@ -44,7 +44,7 @@ ggsave(filename = "plot.png")
 tweet(text = caption, mediaPath = "plot.png")
 
 openlog("correlations.log", append = TRUE)
-printlog(paste(title, substr(toString(sig$p.value), 1, 5)))
+printlog(paste(caption, substr(toString(sig$p.value), 1, 5)))
 closelog(sessionInfo = FALSE)
 
 quit(save = "no", status = 0)
