@@ -43,7 +43,7 @@ ggsave(filename = "plot.png")
 
 tweet(text = caption, mediaPath = "plot.png")
 
-openlog("correlations.log", append = TRUE)
+openlog("~/CorBot/correlations.log", append = TRUE)
 printlog(paste(caption, substr(toString(sig$p.value), 1, 5)))
 closelog(sessionInfo = FALSE)
 
