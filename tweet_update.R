@@ -4,7 +4,7 @@ library(ggthemes)
 library(twitteR)
 library(luzlogr)
 
-source("~/CorBot/Credentials.R")
+source("~/CorBot/credentials.R")
 
 conditions <- c(rep("A", 100), rep("B", 100))
 sd <-  abs(rnorm(1, .5, .25))
