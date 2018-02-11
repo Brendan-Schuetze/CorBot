@@ -79,7 +79,7 @@ if(runif(1, 0, 1) > .5) {
   ggplot(data = z, aes(x, y)) + geom_point() + geom_smooth(method = "lm", se = FALSE) +
     theme_base() + ggtitle(label = title, subtitle = paste("n = 200, df = 98, r =", truncateStr(r_value), "t =", 
                                             truncateStr(t_value), "p =", truncateStr(p_value, FALSE))) + 
-    xlab("A Values") + ylab("B Values") 
+    xlab("A") + ylab("B") 
 }
 ggsave(filename = "plot.png")
 
