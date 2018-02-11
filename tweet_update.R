@@ -4,7 +4,7 @@ library(ggthemes)
 library(twitteR)
 library(luzlogr)
 
-source("Credentials.R")
+source("~/CorBot/credentials.R")
 
 conditions <- c(rep("A", 100), rep("B", 100))
 sd <-  abs(rnorm(1, .5, .25))
@@ -15,11 +15,14 @@ colnames(df) <- c("Condition","Value")
 sig <- t.test(x = df[df$Condition == "A",]$Value, y = df[df$Condition == "B",]$Value)
 
 if(sig$p.value <= .05) {
-  title = "Publishable. 🎉 "
+  caption <-  "Publishable. 🎉 "
+  title <-  "Publishable."
 } else if(sig$p.value <= .1) {
-  title = "Maybe Publishable."
+  title <- "Maybe Publishable."
+  caption <- title
 } else {
-  title = "Not Publishable."
+  title <- "Not Publishable."
+  caption <- title
 }
 
 df <- df %>%
@@ -37,11 +40,11 @@ ggplot(data = df) + geom_bar(aes(x = Condition, y = mean), stat = "identity") +
 
 ggsave(filename = "plot.png")
 
-tweet(text = title, mediaPath = "plot.png")
+tweet(text = caption, mediaPath = "plot.png")
 
-openlog("correlations.log")
-printlog(paste(title, substr(toString(sig$p.value), 1, 5)))
-closelog()
+openlog("~/CorBot/correlations.log", append = TRUE)
+printlog(paste(caption, substr(toString(sig$p.value), 1, 5)))
+closelog(sessionInfo = FALSE)
 
 quit(save = "no", status = 0)
 
