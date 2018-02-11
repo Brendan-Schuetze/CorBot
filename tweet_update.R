@@ -83,11 +83,11 @@ if(runif(1, 0, 1) > .5) {
 }
 ggsave(filename = "plot.png")
 
-#weet(text = caption, mediaPath = "plot.png")
+tweet(text = caption, mediaPath = "plot.png")
 
-#openlog("~/CorBot/correlations.log", append = TRUE)
+openlog("~/CorBot/correlations.log", append = TRUE)
 printlog(paste(caption, substr(toString(sig$p.value), 1, 5)))
-loselog(sessionInfo = FALSE)
+closelog(sessionInfo = FALSE)
 
-#uit(save = "no", status = 0)
+quit(save = "no", status = 0)
 
