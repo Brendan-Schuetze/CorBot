@@ -85,6 +85,12 @@ ggsave(filename = "plot.png")
 
 tweet(text = caption, mediaPath = "plot.png")
 
+if(p_value <= .05) {
+    fp <- read.table("results.txt")
+    fp_caption = paste("New false positive! Current false positive rate =", fp, "#rstats")
+    tweet(text = fp_caption)
+}
+
 openlog("~/CorBot/correlations.log", append = TRUE)
 printlog(paste(caption, "p =",  substr(toString(sig$p.value), 1, 5)))
 closelog(sessionInfo = FALSE)
