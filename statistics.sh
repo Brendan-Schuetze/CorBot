@@ -5,4 +5,5 @@ echo -n '/' >> calc.txt
 grep Publishable. -o /var/www/html/index.html | wc -l >> calc.txt
 perl -p -i -e 's/\R//g;' calc.txt
 echo '' >> calc.txt
-cat calc.txt | bc >> results.txt
+rm results.txt
+cat calc.txt | bc > results.txt

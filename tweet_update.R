@@ -87,7 +87,7 @@ tweet(text = caption, mediaPath = "plot.png")
 
 if(p_value <= .05) {
     fp <- read.table("results.txt")
-    fp_caption = paste("New false positive! Current false positive rate =", fp, "#rstats")
+    fp_caption = paste("New false positive! Current false positive rate =", fp, "alpha = .05 #rstats")
     tweet(text = fp_caption)
 }
 
