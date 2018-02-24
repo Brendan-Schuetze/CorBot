@@ -12,4 +12,5 @@ A Twitter Bot that generates a set of random data, performs a t-test, and tweets
 4. If you want to change the behavior of the bot, edit the commands found within "tweet_update.R"; this is the main R script that composes the tweet and sends it to Twitter.
 4. Create a cronjob running your bot every hour. See this [website](https://code.tutsplus.com/tutorials/scheduling-tasks-with-cron-jobs--net-8800) for more information. A sample cronjob might look like:
 > 0 * * * * Rscript ~/CorBot/tweet_update.R >/dev/null 2>&1
+5. If you want the false positive rate to be calculated automatically, you will also want to add a second cronjob that runs statistics.sh every hour.
 5. That's it. You're done.

@@ -1,6 +1,6 @@
 cd ~/CorBot/
-touch index.html
-cat header.html > index.html
-sed -n '/Closing/!p' correlations.log | sed -n '/Opening/!p' | sed 's/$/<br>/' >> index.html
-cat footer.html >> index.html
-mv index.html /var/www/html/index.html
+touch website/index.html
+cat website/header.html > website/index.html
+sed -n '/Closing/!p' correlations.log | sed -n '/Opening/!p' | sed 's/$/<br>/' >> website/index.html
+cat website/footer.html >> website/index.html
+mv website/index.html /var/www/html/index.html
