@@ -1,8 +1,8 @@
 # CorBot
 
->*[I'm a bot. Technically Type 1 Errors, not correlations. Plotting random data and running t-tests since 2018.](https://twitter.com/CorrelationsBot)*
+>*[I'm a bot. Plotting random data and running t-tests since 2018.](https://twitter.com/CorrelationsBot)*
 
-A Twitter Bot that generates a set of random data, performs a t-test, and tweets out a graph of this data.
+A Twitter Bot that generates a set of random data, performs a t-test, and tweets out a graph of this data. This bot serves as a teaching tool for those interested in understanding what setting an alpha = .05 means in terms of false positives, and also for those wanting to write their own twitter bot using R. Check out my website [bot.schu.etze.co](https://bot.schu.etze.co) for a log of CorBot's results.
 
 # Installation Instructions
 
