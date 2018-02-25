@@ -1,3 +1,4 @@
+# This script pulls results from the rstats log, cleans them, and turns this cleaned text into an html file.
 cd ~/CorBot/
 touch website/index.html
 cat website/header.html > website/index.html
