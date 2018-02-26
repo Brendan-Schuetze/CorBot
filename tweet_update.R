@@ -42,12 +42,13 @@ x <- df[df$Condition == "A",]$Value
 y <- df[df$Condition == "B",]$Value
 z <- data.frame(x, y)
 
+# Alternate randomly between scatterplots and bar graphs
 if(runif(1, 0, 1) > .5) {
   # Compare Means and Create Bar Graph
   sig <- t.test(x, y)
   p_value <- sig$p.value
   
-  # Calculate SD and Confidence Intervals
+  # Calculate SD and Create Confidence Intervals
   df <- df %>%
     group_by(Condition) %>%
     summarize(mean = mean(Value), 
@@ -91,6 +92,7 @@ if(p_value <= .05) {
     tweet(text = fp_caption)
 }
 
+# Log Results of t-test
 openlog("~/CorBot/correlations.log", append = TRUE)
 printlog(paste(caption, "p =",  substr(toString(sig$p.value), 1, 5)))
 closelog(sessionInfo = FALSE)
