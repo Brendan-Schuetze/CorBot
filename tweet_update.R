@@ -78,7 +78,7 @@ if(runif(1, 0, 1) > .5) {
   caption <- unlist(getTitle(p_value)[2])
   
   ggplot(data = z, aes(x, y)) + geom_point() + geom_smooth(method = "lm", se = FALSE) +
-    theme_base() + ggtitle(label = title, subtitle = paste("n = 200, df = 98, r =", truncateStr(r_value), "t =", 
+    theme_base() + ggtitle(label = title, subtitle = paste("n = 100, df = 98, r =", truncateStr(r_value), "t =", 
                                             truncateStr(t_value), "p =", truncateStr(p_value, FALSE))) + 
     xlab("A") + ylab("B") 
 }
@@ -88,7 +88,7 @@ tweet(text = caption, mediaPath = "plot.png")
 
 if(p_value <= .05) {
     fp <- read.table("results.txt")
-    fp_caption = paste("New false positive! Current false positive rate =", fp, "alpha = .05 #rstats")
+    fp_caption = paste("New false positive! Current false positive rate = ", fp, "; alpha = .05 #rstats", sep="")
     tweet(text = fp_caption)
 }
 
