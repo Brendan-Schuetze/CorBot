@@ -15,3 +15,6 @@ rm -f results.txt
 
 # Run calculation using the Linux built-in bc calculator
 cat calc.txt | bc > results.txt
+
+mv results.txt ~/CorBot/results.txt
+mv calc.txt ~/CorBot/calc.txt
