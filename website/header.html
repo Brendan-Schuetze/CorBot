@@ -9,12 +9,54 @@
 		line-height: 26px;
 	}	
 
+.header {
+  text-decoration: none;
+  position: fixed;
+  left: 0px;
+  top: 0;
+  margin-left: 0%;
+  margin-top: 0%;
+  width: 15%;
+  height: 15%
+
+}
+
+.header:hover {
+
+}
+
+@media screen and (max-width : 1000px) {
+    .center{
+	width: 85%;
+	-webkit-text-size-adjust: 200%;
+
+    }
+    .header{
+	display: none;
+	
+    }
+}
+
+img {
+  max-width: 75%;
+  max-height: 75%;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto
+}
+
+
 </style>
 <title>cor(Bot) Log</title>
 </head>
 
 <body>
-	<h2>cor(Bot) Log</h2>
+	<div class="header">
+   		<a href="https://schu.etze.co"><img style="margin-top: 2%;margin-left:2%;" src="https://schu.etze.co/index_files/schuetze.co.png"></a>
+ 	</div>
+	<img style="max-width: 10%" src="https://schu.etze.co/Resources/cor_bot.png"></img>
 	<p>Looking for the bot? Check <a href="https://twitter.com/CorrelationsBot">Twitter.</a><br>
 	Want to see the code? Check <a href="https://github.com/Brendan-Schuetze/CorBot">GitHub.</a></p>
 	<div style="width: max-content; margin: auto; text-align: left">
